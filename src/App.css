@@ -1,6 +1,7 @@
 .App{
   background-color: honeydew;
   width: 60ch;
+  padding-left: 20px;
 }
 
 button {

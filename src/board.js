@@ -5,7 +5,6 @@ export class Board extends Component {
     constructor(props) {
         super(props);
         this.state = { comments: ['hello', 'world', 'i am here'], changed: [null, null, null] };
-
         this.update = this.update.bind(this);
         this.removeTA = this.removeTA.bind(this);
         this.add = this.add.bind(this);
