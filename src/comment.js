@@ -30,6 +30,7 @@ export class Comment extends Component {
     // console.log(idx);
     var tA = document.getElementsByTagName('textarea')[idx];
     // console.log(tA);
+    console.log(tA.value);
      this.props.update(tA.value, idx);
      
   }
@@ -45,7 +46,6 @@ export class Comment extends Component {
     var ta=document.getElementsByTagName('textarea')[idx];
     var val=ta.value;
     this.props.taChange(val,idx);
-    this.state.changed=this.props.changed;
    }
 
   renderNormal() {
