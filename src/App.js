@@ -12,7 +12,6 @@ class App extends Component {
         <h1>React Exercises</h1>
         <Board />
         <Checkbox />
-        <br/>
       </div >
     );
   }

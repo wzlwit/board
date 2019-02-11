@@ -48,8 +48,6 @@ export class Board extends Component {
             <div >
                 <h2>Comments Board:</h2>
                 <button className='btn-purple' onClick={this.add}>Add Comment</button>
-                <br />
-                <br />
                 {this.state.comments.map((text, i) => (<Comment index={i} key={i} update={this.update} removeTA={this.removeTA} value={text} changed={this.state.changed[i]} taChange={this.taChange} taReset={this.taReset} />))}
                 {/* <Comment value={this.state.comments[0]} /> */}
             </div>
