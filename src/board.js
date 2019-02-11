@@ -17,18 +17,12 @@ export class Board extends Component {
         var ary2 = this.state.changed;
         ary[i] = newText;
         ary2[i] = null;
-        console.log("comments are:");
-        console.log(this.state.comments);
-        console.log("changed are:");
-        console.log(this.state.changed);
         this.setState({ comments: ary, changed: ary2 });
     }
     removeTA(index) {
         let ary = this.state.comments, ary2 = this.state.changed;
         ary.splice(index, 1);
         ary2.splice(index, 1);
-        console.log(ary);
-        console.log(ary2);
         this.setState({ comments: ary, changed: ary2 });
         //after removeTA, must re-render by using setState()
     }
@@ -44,13 +38,11 @@ export class Board extends Component {
         var ary = this.state.changed;
         ary[index] = text;
         this.setState({ changed: ary });
-        console.log("textarea chnaged:");
-        console.log(this.state.changed);
     }//this function makes sure  when an TextArea is changed without saved, removing another textarea will work correctlly. the changed value will be kept in array of this.state.changed in <Board/>
     taReset(index) {
-        var ary = this.state.changed;
+        var ary=this.state.changed;
         ary[index] = null;
-        this.setState({ changed: ary });
+        this.setState({ changed: ary});
     }
     render() {
         return (
