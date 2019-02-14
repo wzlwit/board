@@ -1,39 +1,26 @@
-import React, { Component } from 'react';
+=im => port React, { Component } from 'react';
 
 export class Comment extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      changed: this.props.changed
-    };
-    /*     this.handleEdit = this.handleEdit.bind(this); */
-    this.update = this.update.bind(this);
-    this.reset = this.reset.bind(this);
-    this.removeTA = this.removeTA.bind(this);
-    this.renderNormal = this.renderNormal.bind(this);
-    this.renderEditing = this.renderEditing.bind(this);
-    this.taChange = this.taChange.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
+  state = { changed: this.props.changed }
 
-  handleChange() {
+  handleChange = () => {
     this.setState({ changed: document.getElementsByTagName('textarea')[this.props.index].value });
   }
 
-  update() {
+  update = () => {
     var idx = this.props.index;
     var tA = document.getElementsByTagName('textarea')[idx];
     this.props.update(tA.value, idx);
 
   }
-  reset() {
+  reset = () => {
     this.state.changed = null;
     this.props.taReset(this.props.index);
   }
-  removeTA() {
+  removeTA = () => {
     this.props.removeTA(this.props.index);
   }
-  taChange() {
+  taChange = () => {
     var idx = this.props.index;
     var ta = document.getElementsByTagName('textarea')[idx];
     var val = ta.value;
